@@ -15,11 +15,15 @@ class TabBarViewController: UIViewController {
     
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
+    var composeViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
+    
+    // fade transition / custom modal segue for compose screen
+    var fadeTransition: FadeTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +31,11 @@ class TabBarViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
+        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
         
-        viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
+        viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
 
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
@@ -40,8 +45,12 @@ class TabBarViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
+//    override func viewWillAppear(animated: Bool) {
+//        textButton.origin.frame.x = -300
+//    }
 
     /*
     // MARK: - Navigation
@@ -53,26 +62,48 @@ class TabBarViewController: UIViewController {
     }
     */
     @IBAction func didPressTab(sender: UIButton) {
-        let previousIndex = selectedIndex
-        let vc = viewControllers[selectedIndex]
-        let previousVC = viewControllers[previousIndex]
         
-        selectedIndex = sender.tag
+        if sender.tag != 2 {
+            let previousIndex = selectedIndex
+            selectedIndex = sender.tag
+            let vc = viewControllers[selectedIndex]
+            let previousVC = viewControllers[previousIndex]
 
-        buttons[previousIndex].selected = false
+            buttons[previousIndex].selected = false
+            
+            previousVC.willMoveToParentViewController(nil)
+            previousVC.view.removeFromSuperview()
+            previousVC.removeFromParentViewController()
+            
+            addChildViewController(vc)
+            vc.view.frame = contentView.bounds
+            contentView.addSubview(vc.view)
+            vc.didMoveToParentViewController(self)
+            
+            sender.selected = true
+        } else {
+            self.performSegueWithIdentifier("composeSegue"  , sender: nil)
+        }
         
-        previousVC.willMoveToParentViewController(nil)
-        previousVC.view.removeFromSuperview()
-        previousVC.removeFromParentViewController()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        addChildViewController(vc)
-        vc.view.frame = contentView.bounds
-        contentView.addSubview(vc.view)
-        vc.didMoveToParentViewController(self)
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
         
-        sender.selected = true
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
         
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 0.3
     }
 
 }

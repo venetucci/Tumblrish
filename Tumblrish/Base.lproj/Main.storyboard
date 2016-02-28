@@ -16,6 +16,41 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dY0-Tr-AZO">
+                                        <rect key="frame" x="271" y="4" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="trending_icon"/>
+                                        <state key="selected" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gO4-Zg-X6d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oGN-do-4rd">
+                                        <rect key="frame" x="210" y="4" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="account_icon"/>
+                                        <state key="selected" image="account_selected_icon"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tci-5v-5CW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZqC-Wc-NXJ">
+                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xc-f0-SYT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jQh-YE-1LK">
+                                        <rect key="frame" x="76" y="4" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="search_icon"/>
+                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBT-bL-zfN"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kSG-yu-Tyk">
                                         <rect key="frame" x="17" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -25,43 +60,8 @@
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBh-kr-SQr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jQh-YE-1LK">
-                                        <rect key="frame" x="76" y="4" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="search_icon"/>
-                                        <state key="selected" image="search_selected_icon"/>
-                                        <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBT-bL-zfN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oGN-do-4rd">
-                                        <rect key="frame" x="210" y="4" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="account_icon"/>
-                                        <state key="selected" image="account_selected_icon"/>
-                                        <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tci-5v-5CW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dY0-Tr-AZO">
-                                        <rect key="frame" x="271" y="4" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="trending_icon"/>
-                                        <state key="selected" image="trending_selected_icon"/>
-                                        <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gO4-Zg-X6d"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZqC-Wc-NXJ">
-                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="compose_button"/>
-                                        <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xc-f0-SYT"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14509803921568629" green="0.20784313725490197" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.18369827338742364" green="0.24224959286594686" blue="0.33080808080808077" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="Yuy-fB-h2T">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
@@ -78,6 +78,7 @@
                         <outletCollection property="buttons" destination="ZqC-Wc-NXJ" collectionClass="NSMutableArray" id="bvk-Wn-e4H"/>
                         <outletCollection property="buttons" destination="oGN-do-4rd" collectionClass="NSMutableArray" id="vY8-TQ-HPy"/>
                         <outletCollection property="buttons" destination="dY0-Tr-AZO" collectionClass="NSMutableArray" id="bAG-gj-dQm"/>
+                        <segue destination="JsW-bm-AKs" kind="modal" identifier="composeSegue" id="yea-vm-J2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -174,10 +175,21 @@
                                 <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="nevermind"/>
+                                <connections>
+                                    <action selector="didPressNevermind:" destination="JsW-bm-AKs" eventType="touchUpInside" id="ePo-h2-BFx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14509803921568629" green="0.20784313725490197" blue="0.28235294117647058" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatButton" destination="kfb-IV-li2" id="eYy-hU-Nsg"/>
+                        <outlet property="linkButton" destination="yCe-v8-u8u" id="jna-Kw-Jse"/>
+                        <outlet property="photoButton" destination="OGo-ih-oa8" id="LtC-ad-4dl"/>
+                        <outlet property="quoteButton" destination="acd-B7-PqX" id="yoR-Kp-Chl"/>
+                        <outlet property="textButton" destination="0M4-Ra-jGW" id="7DY-3b-9Dw"/>
+                        <outlet property="videoButton" destination="s35-w7-fKL" id="mNH-xC-II1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rje-1C-pQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

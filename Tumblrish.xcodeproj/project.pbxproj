@@ -19,6 +19,8 @@
 		3BCE47F51C824F130073A48C /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47F41C824F130073A48C /* ComposeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3BCE47F71C82504B0073A48C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47F61C82504B0073A48C /* AccountViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3BCE47F91C82506E0073A48C /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47F81C82506E0073A48C /* TrendingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3BCE47FC1C8296B80073A48C /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47FA1C8296B80073A48C /* BaseTransition.swift */; settings = {ASSET_TAGS = (); }; };
+		3BCE47FD1C8296B80073A48C /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47FB1C8296B80073A48C /* FadeTransition.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		3BCE47F41C824F130073A48C /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		3BCE47F61C82504B0073A48C /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3BCE47F81C82506E0073A48C /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		3BCE47FA1C8296B80073A48C /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		3BCE47FB1C8296B80073A48C /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				3BCE47CE1C824A840073A48C /* AppDelegate.swift */,
+				3BCE47FA1C8296B80073A48C /* BaseTransition.swift */,
+				3BCE47FB1C8296B80073A48C /* FadeTransition.swift */,
 				3BCE47D01C824A840073A48C /* ViewController.swift */,
 				3BCE47D21C824A840073A48C /* Main.storyboard */,
 				3BCE47F81C82506E0073A48C /* TrendingViewController.swift */,
@@ -218,7 +224,9 @@
 				3BCE47F91C82506E0073A48C /* TrendingViewController.swift in Sources */,
 				3BCE47D11C824A840073A48C /* ViewController.swift in Sources */,
 				3BCE47F71C82504B0073A48C /* AccountViewController.swift in Sources */,
+				3BCE47FC1C8296B80073A48C /* BaseTransition.swift in Sources */,
 				3BCE47EF1C824BB10073A48C /* TabBarViewController.swift in Sources */,
+				3BCE47FD1C8296B80073A48C /* FadeTransition.swift in Sources */,
 				3BCE47F51C824F130073A48C /* ComposeViewController.swift in Sources */,
 				3BCE47CF1C824A840073A48C /* AppDelegate.swift in Sources */,
 				3BCE47F11C824EB80073A48C /* HomeViewController.swift in Sources */,
