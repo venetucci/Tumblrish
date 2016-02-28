@@ -38,6 +38,7 @@ class SignInViewController: UIViewController {
     func keyboardWillHide(notification: NSNotification!) {
         fieldParentView.frame.origin.y = initialY
     }
+    
 
     /*
     // MARK: - Navigation

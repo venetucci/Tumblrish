@@ -140,7 +140,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.14117647058823529" green="0.17647058823529413" blue="0.25882352941176473" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.056537662172207563" green="0.071003731151114372" blue="0.10353535353535348" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="L26-P2-nbF" appends="YES" id="zIB-MV-yYM"/>
