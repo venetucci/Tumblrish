@@ -21,6 +21,7 @@
 		3BCE47F91C82506E0073A48C /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47F81C82506E0073A48C /* TrendingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3BCE47FC1C8296B80073A48C /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47FA1C8296B80073A48C /* BaseTransition.swift */; settings = {ASSET_TAGS = (); }; };
 		3BCE47FD1C8296B80073A48C /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47FB1C8296B80073A48C /* FadeTransition.swift */; settings = {ASSET_TAGS = (); }; };
+		3BCE47FF1C82BF5B0073A48C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE47FE1C82BF5B0073A48C /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3BCE47F81C82506E0073A48C /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		3BCE47FA1C8296B80073A48C /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		3BCE47FB1C8296B80073A48C /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		3BCE47FE1C82BF5B0073A48C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				3BCE47FB1C8296B80073A48C /* FadeTransition.swift */,
 				3BCE47D01C824A840073A48C /* ViewController.swift */,
 				3BCE47D21C824A840073A48C /* Main.storyboard */,
+				3BCE47FE1C82BF5B0073A48C /* SignInViewController.swift */,
 				3BCE47F81C82506E0073A48C /* TrendingViewController.swift */,
 				3BCE47F61C82504B0073A48C /* AccountViewController.swift */,
 				3BCE47F41C824F130073A48C /* ComposeViewController.swift */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCE47FF1C82BF5B0073A48C /* SignInViewController.swift in Sources */,
 				3BCE47F31C824EE50073A48C /* SearchViewController.swift in Sources */,
 				3BCE47F91C82506E0073A48C /* TrendingViewController.swift in Sources */,
 				3BCE47D11C824A840073A48C /* ViewController.swift in Sources */,
