@@ -12,6 +12,7 @@ class TabBarViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var discoverBubbleImageView: UIImageView!
     
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
@@ -31,12 +32,11 @@ class TabBarViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
-        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
         
-        viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
-
+        viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
+        
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
         
@@ -47,10 +47,6 @@ class TabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        textButton.origin.frame.x = -300
-//    }
 
     /*
     // MARK: - Navigation
@@ -63,35 +59,44 @@ class TabBarViewController: UIViewController {
     */
     @IBAction func didPressTab(sender: UIButton) {
         
-        if sender.tag != 2 {
-            let previousIndex = selectedIndex
-            selectedIndex = sender.tag
-            let vc = viewControllers[selectedIndex]
-            let previousVC = viewControllers[previousIndex]
-
-            buttons[previousIndex].selected = false
-            
-            previousVC.willMoveToParentViewController(nil)
-            previousVC.view.removeFromSuperview()
-            previousVC.removeFromParentViewController()
-            
-            addChildViewController(vc)
-            vc.view.frame = contentView.bounds
-            contentView.addSubview(vc.view)
-            vc.didMoveToParentViewController(self)
-            
-            sender.selected = true
-        } else {
-            self.performSegueWithIdentifier("composeSegue"  , sender: nil)
-        }
+        let previousIndex = selectedIndex
+        buttons[previousIndex].selected = false
+        selectedIndex = sender.tag
         
+        let previousVC = viewControllers[previousIndex]
+        previousVC.willMoveToParentViewController(nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParentViewController()
+        
+        sender.selected = true
+        let vc = viewControllers[selectedIndex]
+        addChildViewController(vc)
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        vc.didMoveToParentViewController(self)
+        
+        if selectedIndex == 1 {
+            hideBubble()
+        } else {
+            animateBubble()
+        }
     }
     
+    func animateBubble() {
+        UIView.animateWithDuration(1.0, delay: 0, options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat], animations: { () -> Void in
+            self.discoverBubbleImageView.transform = CGAffineTransformMakeTranslation(0, -3)
+            }, completion: nil)
+    
+    }
+    
+    func hideBubble() {
+        discoverBubbleImageView.hidden = true
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
-        var destinationViewController = segue.destinationViewController
+        let destinationViewController = segue.destinationViewController
         
         // Set the modal presentation style of your destinationViewController to be custom.
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
@@ -106,4 +111,7 @@ class TabBarViewController: UIViewController {
         fadeTransition.duration = 0.3
     }
 
+    @IBAction func didPressCompose(sender: UIButton) {
+        performSegueWithIdentifier("composeSegue", sender: nil)
+    }
 }
