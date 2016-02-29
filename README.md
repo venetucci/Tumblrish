@@ -24,7 +24,7 @@ The following **required** and **optional** functionality is complete:
 
 Here's a walkthrough of all implemented user stories:
 
-![Video Walkthrough](/mailbox_walkthrough/mailbox_walkthrough.gif)
+![Video Walkthrough](/tumblr_walkthrough/tumblr_walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
