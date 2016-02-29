@@ -81,8 +81,5 @@ class ComposeViewController: UIViewController {
         UIView.animateWithDuration(0, delay: 0.13, options: [ ], animations: { () -> Void in
                 self.dismissViewControllerAnimated(true, completion: nil)
             }, completion: nil)
-        
-        
-        
     }
 }

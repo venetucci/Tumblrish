@@ -60,8 +60,12 @@ class TabBarViewController: UIViewController {
     @IBAction func didPressTab(sender: UIButton) {
         
         let previousIndex = selectedIndex
-        buttons[previousIndex].selected = false
+//        buttons[previousIndex].selected = false
         selectedIndex = sender.tag
+        
+        for button in buttons {
+            button.selected = false
+        }
         
         let previousVC = viewControllers[previousIndex]
         previousVC.willMoveToParentViewController(nil)
